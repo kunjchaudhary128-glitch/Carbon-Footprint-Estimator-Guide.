@@ -1,0 +1,21 @@
+country,lat,lon,climate_zone,grid_intensity,urban_density
+India,20.59,78.96,Tropical,0.72,464
+China,35.86,104.2,Continental,0.555,153
+USA,37.09,-95.71,Temperate,0.39,36
+UK,55.38,-3.44,Temperate,0.23,281
+Germany,51.17,10.45,Temperate,0.34,240
+France,46.23,2.21,Temperate,0.057,119
+Brazil,-14.24,-51.93,Tropical,0.075,25
+Japan,36.2,138.25,Temperate,0.47,347
+Australia,-25.27,133.78,Arid,0.53,3
+Canada,56.13,-106.35,Continental,0.12,4
+South Africa,-30.56,22.94,Temperate,0.92,49
+Nigeria,9.08,7.49,Tropical,0.41,226
+Sweden,60.13,18.64,Continental,0.013,25
+Norway,60.47,8.47,Continental,0.008,15
+Poland,51.92,19.15,Continental,0.66,124
+Indonesia,-0.79,113.92,Tropical,0.62,151
+Mexico,23.63,-102.55,Tropical,0.42,66
+Russia,61.52,105.32,Continental,0.34,9
+South Korea,35.91,127.77,Temperate,0.42,527
+Italy,41.87,12.57,Temperate,0.25,206

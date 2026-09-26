@@ -1,0 +1,106 @@
+# ============================================
+# Carbon Footprint Estimator — Configuration
+# ============================================
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  models: "models"
+
+data:
+  num_samples: 5000
+  test_size: 0.2
+  random_state: 42
+
+# Emission factors (tonnes CO2 per unit)
+emission_factors:
+  diet:
+    Vegan: 1.5
+    Vegetarian: 2.0
+    Pescatarian: 2.5
+    Omnivore: 3.0
+    Heavy Meat: 3.5
+
+  vehicle:  # kg CO2 per km
+    Petrol: 0.192
+    Diesel: 0.171
+    Hybrid: 0.110
+    EV: 0.020
+    None: 0.0
+
+  flights:  # tonnes CO2 per flight
+    short_haul: 0.25
+    long_haul: 1.60
+
+  heating:  # tonnes CO2 per year
+    Natural Gas: 2.0
+    Oil: 2.8
+    Electric: 0.5
+    Wood: 0.3
+    Heat Pump: 0.2
+
+# Grid carbon intensity (kg CO2 per kWh) by country
+grid_intensity:
+  India: 0.720
+  China: 0.555
+  USA: 0.390
+  UK: 0.230
+  Germany: 0.340
+  France: 0.057
+  Brazil: 0.075
+  Japan: 0.470
+  Australia: 0.530
+  Canada: 0.120
+  South Africa: 0.920
+  Nigeria: 0.410
+  Sweden: 0.013
+  Norway: 0.008
+  Poland: 0.660
+  Indonesia: 0.620
+  Mexico: 0.420
+  Russia: 0.340
+  South Korea: 0.420
+  Italy: 0.250
+
+# Model hyperparameters
+model:
+  xgboost:
+    n_estimators: 500
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_alpha: 0.1
+    reg_lambda: 1.0
+
+  random_forest:
+    n_estimators: 300
+    max_depth: 12
+    min_samples_split: 5
+    min_samples_leaf: 2
+
+  ridge:
+    alpha: 1.0
+
+# Climate zones
+climate_zones:
+  Tropical:
+    avg_temp_range: [25, 35]
+    heating_multiplier: 0.1
+    cooling_multiplier: 1.5
+  Arid:
+    avg_temp_range: [20, 40]
+    heating_multiplier: 0.3
+    cooling_multiplier: 1.8
+  Temperate:
+    avg_temp_range: [10, 20]
+    heating_multiplier: 1.0
+    cooling_multiplier: 0.5
+  Continental:
+    avg_temp_range: [-5, 15]
+    heating_multiplier: 1.8
+    cooling_multiplier: 0.3
+  Polar:
+    avg_temp_range: [-20, 5]
+    heating_multiplier: 2.5
+    cooling_multiplier: 0.0
